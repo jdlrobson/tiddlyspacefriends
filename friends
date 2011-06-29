@@ -198,7 +198,6 @@ function renderTiddlerList(container,friend) {
 								},
 								dataType: "json",
 								success: function(tiddler) {
-									$(win).hide();
 									$(".text",win).html(tiddler.render);
 									$(win).show(1000);
 								} 
