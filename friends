@@ -219,6 +219,7 @@ function renderTiddlerList(container,friend) {
 					var bag = $(ev.target).data("bag");
 					var space = bag.split("_")[0];
 					var area = $(ev.target).parents(".tiddler").children(".extra")[0];
+					$(area).hide();
 					$("<textarea />").appendTo(area);
 					$("<button />").text("save feedback").click(function(ev) {
 						var tid = new tiddlyweb.Tiddler("Feedback for " + title, userbag);
@@ -232,6 +233,7 @@ function renderTiddlerList(container,friend) {
 							printError("error commenting!");
 						});
 					}).appendTo(area);
+					$(area).show(1000);
 					ev.preventDefault();
 					$(ev.target).remove();
 					return false;
