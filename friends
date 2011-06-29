@@ -233,6 +233,7 @@ function renderTiddlerList(container,friend) {
 						});
 					}).appendTo(area);
 					ev.preventDefault();
+					$(ev.target).remove();
 					return false;
 				}).appendTo(toolbar);
 				
