@@ -236,7 +236,7 @@ function renderTiddlerList(container,friend) {
 					$(ev.target).remove();
 					return false;
 				}).appendTo(toolbar);
-				
+
 				$(win).hide();
 				$(link).data("win", win);
 			}
